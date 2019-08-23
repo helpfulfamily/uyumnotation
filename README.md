@@ -41,6 +41,10 @@
  
  Örnek2: clientreactchat modülünden, gateway modülüne transaction JSON objesi aktarılıyor. Gatewayden, persiste Message<Transaction> objesi aktarılıyor. Persistten notificationa gene Message<Transaction> objesi aktarılıyor.
  
-  clientreactchat -(transaction)-> 
+ 
+ 
+      clientreactchat -(transaction)-> 
+                     
                        gateway -(message<transaction>)-> 
-                                  persist -(message<transaction>))-> notification.
+                                 
+                                 persist -(message<transaction>))-> notification.
