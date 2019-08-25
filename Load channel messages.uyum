@@ -1,25 +1,15 @@
  client{
-    componentDidMount {
-        fetchData -> ChannelContentAction.js { channelContentsFetchData { axios } }
-    }
+        ChannelContentDoor.js {
+                    getChannelContentsOut(channelName, pageNumber)
+        }
 
-} -(kanaladı, sayfasayısı)->
- gateway -(kanaladı, sayfasayısı)->
- persist -(mesajlistesi)->
- gateway -(mesajlistesi)->
+} -(channelName, pageNumber)->
+
+ gateway -(channelName, pageNumber)->
+ persist -(contents)->
+ gateway -(contents)->
  client{
-    ChannelContentAction.js {
-
-         componentDidMount(){
-            channelContentsFetchData() {
-                axios {
-                    dispatch(channelContentsFetchDataSuccess(contents)))
-                        ~ChannelContentReducer.js {channelContentReducer ()
-                        }
-
-}
-}
-}
-}
-}
-
+  ChannelContentDoor.js {
+                     getChannelContentsIn(contents)
+         }
+ }
