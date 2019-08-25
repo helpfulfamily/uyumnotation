@@ -1,0 +1,25 @@
+ client{
+    componentDidMount {
+        fetchData -> ChannelContentAction.js { channelContentsFetchData { axios } }
+    }
+
+} -(kanaladı, sayfasayısı)->
+ gateway -(kanaladı, sayfasayısı)->
+ persist -(mesajlistesi)->
+ gateway -(mesajlistesi)->
+ client{
+    ChannelContentAction.js {
+
+         componentDidMount(){
+            channelContentsFetchData() {
+                axios {
+                    dispatch(channelContentsFetchDataSuccess(contents)))
+                        ~ChannelContentReducer.js {channelContentReducer ()
+                        }
+
+}
+}
+}
+}
+}
+
