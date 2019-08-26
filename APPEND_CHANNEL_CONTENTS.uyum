@@ -1,0 +1,16 @@
+ // APPEND_CHANNEL_CONTENTS: Uyum notation that demonstrates the action to append channel contents when scroll reach to top.
+ client{
+        AppendChannelContentsDoor.js {
+                    appendChannelContentsOut(channelName, pageNumber)
+        }
+
+} -(channelName, pageNumber)->
+
+ gateway -(channelName, pageNumber)->
+ persist -(ChannelContentMessage<contents>)->
+ gateway -(contents)->
+ client{
+  AppendChannelContentsDoor.js {
+                     appendChannelContentsIn(contents)
+         }
+ }
