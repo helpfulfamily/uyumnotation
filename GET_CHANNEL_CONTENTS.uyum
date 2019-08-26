@@ -1,15 +1,17 @@
+ // GET_CHANNEL_CONTENTS: Uyum notation that demonstrates the action to get channel contents.
  client{
-        ChannelContentDoor.js {
+        GetChannelContentsDoor.js {
                     getChannelContentsOut(channelName, pageNumber)
         }
 
 } -(channelName, pageNumber)->
 
  gateway -(channelName, pageNumber)->
- persist -(contents)->
+ persist -(ChannelContentMessage<contents>)->
  gateway -(contents)->
  client{
-  ChannelContentDoor.js {
+  GetChannelContentsDoor.js {
                      getChannelContentsIn(contents)
          }
  }
+
