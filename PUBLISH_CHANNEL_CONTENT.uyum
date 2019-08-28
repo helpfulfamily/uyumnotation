@@ -1,12 +1,13 @@
 // PUBLISH_CHANNEL_CONTENT: Kanala tek bir mesaj gönderip kanaldaki tüm kullanıcılara dağıtan aksiyon.
+channelContents:
 
 client {
       PublishChannelContentDoor.js {
-                  PublishChannelContentOut(content)
+                  PublishChannelContentOut(content, token)
       }
-   } -(content)->
-gateway -(content)->
-persist -(content)->
+   } -(content, token) ->
+gateway -(content, token) ->
+persist -(content, token) ->
 notification-(content)->
 client{
       PublishChannelContentDoor.js {
