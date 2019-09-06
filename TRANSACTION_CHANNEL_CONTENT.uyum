@@ -1,0 +1,16 @@
+// TRANSACTION_CHANNEL_CONTENT: Kanaldaki herhangi bir mesaja Thankcoin gönderip kanaldaki tüm kullanıcılara dağıtan aksiyon.
+channelContents:
+
+client {
+      TransactionChannelContentDoor.js {
+                  transactionChannelContentOut(transaction, token)
+      }
+   } -(content, token) ->
+gateway -(transaction, token) ->
+persist -(transaction, token) ->
+notification-(transaction)->
+client{
+      TransactionChannelContentDoor.js {
+                  transactionChannelContentIn(transaction)
+      }
+}
