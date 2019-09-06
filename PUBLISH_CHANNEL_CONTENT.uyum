@@ -3,7 +3,7 @@ channelContents:
 
 client {
       PublishChannelContentDoor.js {
-                  PublishChannelContentOut(content, token)
+                  publishChannelContentOut(content, token)
       }
    } -(content, token) ->
 gateway -(content, token) ->
@@ -11,6 +11,6 @@ persist -(content, token) ->
 notification-(content)->
 client{
       PublishChannelContentDoor.js {
-                  PublishChannelContentIn(content)
+                  publishChannelContentIn(content)
       }
 }
