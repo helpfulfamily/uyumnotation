@@ -1,0 +1,16 @@
+// TRANSACTION_CHANNEL: Herhangi bir kanala Thankcoin gönderip (o kanalı o an gören) tüm kullanıcılara dağıtan aksiyon.
+loginUser:
+
+client {
+      TransactionChannelDoor.js {
+                  transactionChannelOut(transaction, token)
+      }
+   } -(content, token) ->
+gateway -(transaction, token) ->
+persist -(transaction, token) ->
+notification-(transaction)->
+client{
+      TransactionChannelDoor.js {
+                  transactionChannelIn(transaction)
+      }
+}
