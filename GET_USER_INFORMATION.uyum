@@ -1,0 +1,19 @@
+ // GET_USER_INFORMATION: Uyum notation that demonstrates the action to get user information by username.
+userInformation:
+
+ client{
+        GetUserInformationDoor.js {
+                    getUserInformationOut(username)
+        }
+
+} -(username)->
+
+ gateway -(username)->
+ persist -(username)->
+ gateway -(userInformation)->
+ client{
+  GetUserInformationDoor.js {
+                     getUserInformationIn(userInformation)
+         }
+ }
+
