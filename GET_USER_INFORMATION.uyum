@@ -9,7 +9,7 @@ userInformation:
 } -(username)->
 
  gateway -(username)->
- persist -(username)->
+ persist -(userInformation)->
  gateway -(userInformation)->
  client{
   GetUserInformationDoor.js {
