@@ -1,0 +1,16 @@
+// OBSERVATION_CHANNEL: Action to observe/unobserve channel.
+channel:
+
+client {
+      ObservationChannelDoor.js {
+                  observationChannelOut(observation, token)
+      }
+   } -(observation, token) ->
+gateway -(observation, token) ->
+persist -(observation, token) ->
+notification-(observation)->
+client{
+      ObservationChannelDoor.js {
+                  observationChannelOut(observation)
+      }
+}
