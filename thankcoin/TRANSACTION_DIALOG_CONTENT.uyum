@@ -1,7 +1,7 @@
- /* *****
+ /*
  TRANSACTION_DIALOG_CONTENT: Kullanıcıya gönderilen herhangi bir mesaja Thankcoin gönderip,
  bu değişikliği dialogtaki kullanıcılara dağıtan aksiyon.
- ***** */
+ */
 
 dialogContents:
 

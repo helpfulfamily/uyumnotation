@@ -3,12 +3,12 @@ dialogContents:
 
  client{
         GetDialogContentsDoor.js {
-                    getDialogContentsOut(senderID, receiverId)
+                    getDialogContentsOut(senderID, receiverID)
         }
 
-} -(senderID, receiverId)->
+} -(senderID, receiverID)->
 
- gateway -(senderID, receiverId)->
+ gateway -(senderID, receiverID)->
  persist -(DialogContentMessage<contents>)->
  gateway -(dialogContents)->
  client{
