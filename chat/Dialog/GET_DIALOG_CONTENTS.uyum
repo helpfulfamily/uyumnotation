@@ -1,0 +1,19 @@
+ // GET_DIALOG_CONTENTS: Uyum notation that demonstrates the action to get dialog contents.
+dialogContents:
+
+ client{
+        GetDialogContentsDoor.js {
+                    getDialogContentsOut(senderID, receiverID)
+        }
+
+} -(senderID, receiverID)->
+
+ gateway -(senderID, receiverID)->
+ persist -(DialogContentMessage<contents>)->
+ gateway -(dialogContents)->
+ client{
+  GetDialogContentsDoor.js {
+                     getDialogContentsIn(dialogContents)
+         }
+ }
+

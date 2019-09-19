@@ -1,0 +1,20 @@
+ /*
+ TRANSACTION_DIALOG_CONTENT: Kullanıcıya gönderilen herhangi bir mesaja Thankcoin gönderip,
+ bu değişikliği dialogtaki kullanıcılara dağıtan aksiyon.
+ */
+
+dialogContents:
+
+client {
+      TransactionDialogContentDoor.js {
+                  transactionDialogContentOut(transaction, token)
+      }
+   } -(content, token) ->
+gateway -(transaction, token) ->
+persist -(transaction, token) ->
+notification-(transaction)->
+client{
+      TransactionDialogContentDoor.js {
+                  transactionDialogContentIn(transaction)
+      }
+}

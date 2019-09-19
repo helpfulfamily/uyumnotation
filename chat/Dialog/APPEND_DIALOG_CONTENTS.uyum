@@ -1,0 +1,18 @@
+ // APPEND_DİALOG_CONTENTS: Uyum notation that demonstrates the action to append dialog contents when scroll reach to top.
+ dialogContents:
+
+ client{
+        AppendDialogContentsDoor.js {
+                    appendDialogContentsOut(senderID, receiverID, pageNumber)
+        }
+
+} -(senderID, receiverID, pageNumber)->
+
+ gateway -(senderID, receiverID, pageNumber)->
+ persist -(DialogContentMessage<contents>)->
+ gateway -(dialogContents)->
+ client{
+  AppendDialogContentsDoor.js {
+                     appendDialogContentsIn(dialogContents)
+         }
+ }
