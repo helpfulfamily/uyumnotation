@@ -1,0 +1,16 @@
+// PUBLISH_DIALOG_CONTENT: Başka bir kişiye tek bir mesaj gönderip o kişiye ulaştıran aksiyon.
+dialogContents:
+
+client {
+      PublishDialogContentDoor.js {
+                  publishDialogContentOut(content, token)
+      }
+   } -(content, token) ->
+gateway -(content, token) ->
+persist -(content, token) ->
+notification-(content)->
+client{
+      PublishDialogContentDoor.js {
+                  publishDialogContentIn(content)
+      }
+}
