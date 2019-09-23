@@ -3,12 +3,12 @@
 
  client{
         AppendDialogContentsDoor.js {
-                    appendDialogContentsOut(senderID, receiverID, pageNumber)
+                    appendDialogContentsOut(token, receiverID, pageNumber)
         }
 
-} -(senderID, receiverID, pageNumber)->
+} -(token, receiverID, pageNumber)->
 
- gateway -(senderID, receiverID, pageNumber)->
+ gateway -(token, receiverID, pageNumber)->
  persist -(DialogContentMessage<contents>)->
  gateway -(dialogContents)->
  client{
